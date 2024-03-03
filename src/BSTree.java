@@ -42,4 +42,10 @@ public class BSTree
         preOrderTraversal(currentNode.leftChild);
         preOrderTraversal(currentNode.rightChild);
     }
+    public void postOrderTraversal(BSTnode currentNode)
+    {
+        postOrderTraversal(currentNode.leftChild);
+        postOrderTraversal(currentNode.rightChild);
+        System.out.println(currentNode.toString());
+    }
 }
