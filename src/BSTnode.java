@@ -11,6 +11,6 @@ public class BSTnode
 
     @Override
     public String toString() {
-        return "data -> "+data;
+        return data + " , ";
     }
 }

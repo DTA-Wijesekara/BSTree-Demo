@@ -38,14 +38,32 @@ public class BSTree
     }
     public void preOrderTraversal(BSTnode currentNode)
     {
-        System.out.println(currentNode.toString());
+        if (currentNode == null)
+        {
+            return;
+        }
+        System.out.print(currentNode.toString());
         preOrderTraversal(currentNode.leftChild);
         preOrderTraversal(currentNode.rightChild);
     }
     public void postOrderTraversal(BSTnode currentNode)
     {
+        if (currentNode == null)
+        {
+            return;
+        }
         postOrderTraversal(currentNode.leftChild);
         postOrderTraversal(currentNode.rightChild);
-        System.out.println(currentNode.toString());
+        System.out.print(currentNode.toString());
+    }
+    public void inOrderTraversal(BSTnode currentNode)
+    {
+        if (currentNode == null)
+        {
+            return;
+        }
+        inOrderTraversal(currentNode.leftChild);
+        System.out.print(currentNode.toString());
+        inOrderTraversal(currentNode.rightChild);
     }
 }
