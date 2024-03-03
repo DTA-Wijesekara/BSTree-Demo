@@ -14,5 +14,6 @@ public class Main {
         t.postOrderTraversal(t.root);
         System.out.println();
         t.inOrderTraversal(t.root);
+        System.out.println("\nfing node :- "+t.findNode(2));
     }
 }

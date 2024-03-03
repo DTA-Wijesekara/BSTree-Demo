@@ -66,4 +66,27 @@ public class BSTree
         System.out.print(currentNode.toString());
         inOrderTraversal(currentNode.rightChild);
     }
+    public BSTnode findNode (int data)
+    {
+        BSTnode currentNode = root;
+        while(currentNode != null)
+        {
+            if (data == currentNode.data)
+            {
+                return currentNode;
+            }
+            else
+            {
+                if (data < currentNode.data)
+                {
+                    currentNode = currentNode.leftChild;
+                }
+                else
+                {
+                    currentNode = currentNode.rightChild;
+                }
+            }
+        }
+        return null;
+    }
 }
