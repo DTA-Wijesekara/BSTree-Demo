@@ -36,4 +36,10 @@ public class BSTree
 
         }
     }
+    public void preOrderTraversal(BSTnode currentNode)
+    {
+        System.out.println(currentNode.toString());
+        preOrderTraversal(currentNode.leftChild);
+        preOrderTraversal(currentNode.rightChild);
+    }
 }
