@@ -1,6 +1,22 @@
 public class BSTree
 {
     BSTnode root;
+    public boolean remove(int data)
+    {
+        if (root == null)
+        {
+            return false;
+        }
+        if (root.leftChild==null)
+        {
+            root=root.rightChild;
+        }
+        else if (root.rightChild==null)
+        {
+            root=root.leftChild;
+        }
+        return root.remove(data,null);
+    }
     public void addNode(int data)
     {
         BSTnode newNode = new BSTnode(data);

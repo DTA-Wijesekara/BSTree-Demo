@@ -9,11 +9,14 @@ public class Main {
         t.addNode(15);
         t.addNode(2);
         t.addNode(25);
-        t.preOrderTraversal(t.root);
-        System.out.println();
-        t.postOrderTraversal(t.root);
+//        t.preOrderTraversal(t.root);
+//        System.out.println();
+//        t.postOrderTraversal(t.root);
+//        System.out.println();
+        t.inOrderTraversal(t.root);
+//        System.out.println("\nfing node :- "+t.findNode(2));
+        t.remove(3);
         System.out.println();
         t.inOrderTraversal(t.root);
-        System.out.println("\nfing node :- "+t.findNode(2));
     }
 }
