@@ -52,6 +52,46 @@ public class BSTree
 
         }
     }
+    public void addNodetype2(int data)
+    {
+        BSTnode newNode = new BSTnode(data);
+        if (root == null)
+        {
+            root = newNode;
+        }
+        else
+        {
+            BSTnode currentNode = root;
+            while (true)
+            {
+                if (newNode.data < currentNode.data)
+                {
+                    if (currentNode.leftChild == null)
+                    {
+                        currentNode.leftChild=newNode;
+                        return;
+                    }
+                    else
+                    {
+                        currentNode = currentNode.leftChild;
+                    }
+                }
+                else
+                {
+                    if (currentNode.rightChild == null)
+                    {
+                        currentNode.rightChild=newNode;
+                        return;
+                    }
+                    else
+                    {
+                        currentNode = currentNode.rightChild;
+                    }
+                }
+            }
+
+        }
+    }
     public void preOrderTraversal(BSTnode currentNode)
     {
         if (currentNode == null)
