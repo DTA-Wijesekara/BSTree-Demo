@@ -92,6 +92,27 @@ public class BSTree
 
         }
     }
+    public void addNodeRecursively(int data)
+    {
+        root = insertRec(root,data);
+    }
+    public BSTnode insertRec(BSTnode root,int data)
+    {
+        if (root == null)
+        {
+            root = new BSTnode(data);
+            return root;
+        }
+        else if(data < root.data)
+        {
+            root.leftChild = insertRec(root.leftChild , data);
+        }
+        else if(data >= root.data)
+        {
+            root.rightChild = insertRec(root.rightChild , data);
+        }
+        return root;
+    }
     public void preOrderTraversal(BSTnode currentNode)
     {
         if (currentNode == null)
